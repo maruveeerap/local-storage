@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflixreg</title>
+    <style>
+        body {
+            background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/79fe83d4-7ef6-4181-9439-46db72599559/bd05b4ed-7e37-4be9-85c8-078f067bd150/IN-en-20221017-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+        }
+
+        #loginbox {
+            border: 0px solid yellow;
+            width: 25%;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            height: 550px;
+            padding: 30PX;
+            background-color: rgba(6, 1, 1, 0.8);
+
+
+            box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        }
+
+        #loginbox>h1 {
+            color: rgb(250, 245, 245);
+            font-size: 40px;
+        }
+
+        #loginbox>form>input {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px white solid;
+            font-size: 20px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            background-color: #e8f0fd;
+        }
+
+        #loginbox>form>input[type=submit] {
+            background-color: red;
+            border: 1px solid red;
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        div>a {
+            font-size: 30px;
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="loginbox">
+        <h1>Sign-up</h1>
+        <form>
+            <input id="name" type="text" placeholder="enter your name">
+            <input id="mail" type="email" placeholder="enter your mail id">
+            <input id="password" type="password" placeholder="enter your password">
+            <input id="submit" type="submit">
+
+        </form>
+        <a href="/Users/deepaksheoran/Desktop/anand/html css/local storage/login.html">Login</a>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", myReg)
+    function myReg(event) {
+        event.preventDefault();
+        let name = document.querySelector("#name").value
+        let user = document.querySelector("#mail").value
+        let pass = document.querySelector("#password").value
+
+        document.querySelector("#submit").addEventListener("click", saveData)
+        localStorage.setItem("name", name)
+        localStorage.setItem("user", user)
+        localStorage.setItem("pass", pass)
+    }
+    function saveData() {
+
+
+    }
+
+</script>
